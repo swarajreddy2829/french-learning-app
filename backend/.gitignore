@@ -1,0 +1,38 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+.local/
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+
+# Maven and generated output
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+*.log
+logs/
+
+# IDE metadata
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+
+# Operating system and temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.swp
+*~

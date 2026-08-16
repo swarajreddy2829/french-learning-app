@@ -22,7 +22,7 @@
 - [X] T002 Create Maven Wrapper files `mvnw`, `mvnw.cmd`, `.mvn/wrapper/maven-wrapper.jar`, and `.mvn/wrapper/maven-wrapper.properties`, then add the application entry point at `src/main/java/com/example/frenchlearning/FrenchLearningApplication.java`
 - [X] T003 [P] Create feature package boundaries with documentation in `src/main/java/com/example/frenchlearning/auth/package-info.java`, `user/package-info.java`, `lesson/package-info.java`, `quiz/package-info.java`, `progress/package-info.java`, `security/package-info.java`, `exception/package-info.java`, `configuration/package-info.java`, and `common/package-info.java`
 - [X] T004 [P] Configure externalized defaults and `local`/`test` profiles in `src/main/resources/application.yml`, `src/main/resources/application-local.yml`, and `src/test/resources/application-test.yml`
-- [ ] T005 [P] Create local PostgreSQL configuration and safe examples in `compose.yaml`, `.env.example`, and `.gitignore`, excluding `.env`, `.local/`, private keys, generated output, and IDE metadata
+- [X] T005 [P] Create local PostgreSQL configuration and safe examples in `compose.yaml`, `.env.example`, and `.gitignore`, excluding `.env`, `.local/`, private keys, generated output, and IDE metadata
 - [ ] T006 Configure compiler, Surefire, Failsafe, JaCoCo, and build reproducibility rules in `pom.xml`, separating `*Test` unit tests from `*IT` integration tests
 - [ ] T007 [P] Create the initial setup, configuration, build, and run outline in `README.md` with links to `specs/001-french-learning-backend/quickstart.md` and `specs/001-french-learning-backend/contracts/openapi.yaml`
 
