@@ -1,0 +1,31 @@
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    url: ${TEST_DB_URL:jdbc:postgresql://localhost:5432/french_learning_test}
+    username: ${TEST_DB_USERNAME:french_test}
+    password: ${TEST_DB_PASSWORD:french_test}
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 0
+  flyway:
+    clean-disabled: false
+  jpa:
+    show-sql: false
+
+app:
+  jwt:
+    issuer: ${TEST_JWT_ISSUER:https://issuer.example.test}
+    audience: ${TEST_JWT_AUDIENCE:french-learning-api-test}
+    private-key-path: ${TEST_JWT_PRIVATE_KEY_PATH:classpath:keys/test-private.pem}
+    public-key-path: ${TEST_JWT_PUBLIC_KEY_PATH:classpath:keys/test-public.pem}
+    access-token-ttl: 5m
+  bootstrap:
+    admin:
+      enabled: false
+
+logging:
+  level:
+    root: WARN
+    com.example.frenchlearning: INFO
