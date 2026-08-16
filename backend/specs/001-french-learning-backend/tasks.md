@@ -44,8 +44,8 @@
 - [X] T013 [P] Define stable error codes, field violations, and RFC 9457 extension names in `src/main/java/com/example/frenchlearning/exception/ErrorCode.java` and `src/main/java/com/example/frenchlearning/exception/FieldViolation.java`
 - [X] T014 Implement domain exception types and centralized validation, malformed request, conflict, not-found, and fallback handling in `src/main/java/com/example/frenchlearning/exception/ApiException.java`, `ResourceNotFoundException.java`, `ConflictException.java`, and `GlobalExceptionHandler.java`
 - [X] T015 [P] Add correlation ID propagation and safe structured request logging in `src/main/java/com/example/frenchlearning/configuration/CorrelationIdFilter.java` and `src/main/java/com/example/frenchlearning/configuration/LoggingConfiguration.java`
-- [ ] T016 [P] Implement bounded page validation and opaque attempt cursor encoding/decoding in `src/main/java/com/example/frenchlearning/common/api/PageRequestValidator.java` and `src/main/java/com/example/frenchlearning/common/api/AttemptCursorCodec.java`
-- [ ] T017 Configure restricted-detail liveness/readiness groups and verify them in `src/main/resources/application.yml` and `src/test/java/com/example/frenchlearning/integration/HealthEndpointIT.java`
+- [X] T016 [P] Implement bounded page validation and opaque attempt cursor encoding/decoding in `src/main/java/com/example/frenchlearning/common/api/PageRequestValidator.java` and `src/main/java/com/example/frenchlearning/common/api/AttemptCursorCodec.java`
+- [X] T017 Configure restricted-detail liveness/readiness groups and verify them in `src/main/resources/application.yml` and `src/test/java/com/example/frenchlearning/integration/HealthEndpointIT.java`
 
 **Checkpoint**: Shared infrastructure compiles, PostgreSQL-backed tests can run, and the standard API/error primitives are available to all stories.
 
@@ -60,9 +60,9 @@
 ### Tests for User Story 1
 
 - [ ] T018 [P] [US1] Write failing registration and duplicate-email service tests in `src/test/java/com/example/frenchlearning/unit/auth/RegistrationServiceTest.java`
-- [ ] T019 [P] [US1] Write failing user repository normalization, uniqueness, role, and concurrent-registration tests in `src/test/java/com/example/frenchlearning/integration/user/UserRepositoryIT.java`
-- [ ] T020 [P] [US1] Write failing registration/login request, response, validation, and generic-credential-error API tests in `src/test/java/com/example/frenchlearning/api/AuthControllerIT.java`
-- [ ] T021 [P] [US1] Write failing JWT issuer, audience, expiry, algorithm, role mapping, missing-token, malformed-token, and `WWW-Authenticate` tests in `src/test/java/com/example/frenchlearning/security/JwtSecurityIT.java`
+- [X] T019 [P] [US1] Write failing user repository normalization, uniqueness, role, and concurrent-registration tests in `src/test/java/com/example/frenchlearning/integration/user/UserRepositoryIT.java`
+- [X] T020 [P] [US1] Write failing registration/login request, response, validation, and generic-credential-error API tests in `src/test/java/com/example/frenchlearning/api/AuthControllerIT.java`
+- [X] T021 [P] [US1] Write failing JWT issuer, audience, expiry, algorithm, role mapping, missing-token, malformed-token, and `WWW-Authenticate` tests in `src/test/java/com/example/frenchlearning/security/JwtSecurityIT.java`
 
 ### Implementation for User Story 1
 

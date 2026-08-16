@@ -36,6 +36,23 @@ server:
     include-stacktrace: never
     include-exception: false
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: never
+      show-components: never
+      group:
+        liveness:
+          include: livenessState
+        readiness:
+          include: readinessState,db
+
 app:
   database:
     url: ${DB_URL}
