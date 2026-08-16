@@ -2,19 +2,18 @@ spring:
   config:
     activate:
       on-profile: test
-  datasource:
-    url: ${TEST_DB_URL:jdbc:postgresql://localhost:5432/french_learning_test}
-    username: ${TEST_DB_USERNAME:french_test}
-    password: ${TEST_DB_PASSWORD:french_test}
-    hikari:
-      maximum-pool-size: 5
-      minimum-idle: 0
   flyway:
     clean-disabled: false
   jpa:
     show-sql: false
 
 app:
+  database:
+    url: ${TEST_DB_URL:jdbc:postgresql://localhost:5432/french_learning_test}
+    username: ${TEST_DB_USERNAME:french_test}
+    password: ${TEST_DB_PASSWORD:french_test}
+    maximum-pool-size: 5
+    minimum-idle: 0
   jwt:
     issuer: ${TEST_JWT_ISSUER:https://issuer.example.test}
     audience: ${TEST_JWT_AUDIENCE:french-learning-api-test}

@@ -24,7 +24,7 @@
 - [X] T004 [P] Configure externalized defaults and `local`/`test` profiles in `src/main/resources/application.yml`, `src/main/resources/application-local.yml`, and `src/test/resources/application-test.yml`
 - [X] T005 [P] Create local PostgreSQL configuration and safe examples in `compose.yaml`, `.env.example`, and `.gitignore`, excluding `.env`, `.local/`, private keys, generated output, and IDE metadata
 - [X] T006 Configure compiler, Surefire, Failsafe, JaCoCo, and build reproducibility rules in `pom.xml`, separating `*Test` unit tests from `*IT` integration tests
-- [ ] T007 [P] Create the initial setup, configuration, build, and run outline in `README.md` with links to `specs/001-french-learning-backend/quickstart.md` and `specs/001-french-learning-backend/contracts/openapi.yaml`
+- [X] T007 [P] Create the initial setup, configuration, build, and run outline in `README.md` with links to `specs/001-french-learning-backend/quickstart.md` and `specs/001-french-learning-backend/contracts/openapi.yaml`
 
 **Checkpoint**: `.\mvnw.cmd test` starts a Spring Boot test context, and local PostgreSQL can be started independently.
 
@@ -36,14 +36,14 @@
 
 **⚠️ CRITICAL**: No user-story implementation begins until this phase is complete.
 
-- [ ] T008 Create a reusable PostgreSQL Testcontainers base with dynamic datasource properties in `src/test/java/com/example/frenchlearning/integration/PostgresIntegrationTest.java`
-- [ ] T009 [P] Add application context and production-profile configuration smoke tests in `src/test/java/com/example/frenchlearning/integration/ApplicationContextIT.java`
-- [ ] T010 [P] Enable JPA auditing and implement UTC audit fields plus optimistic locking in `src/main/java/com/example/frenchlearning/configuration/PersistenceConfiguration.java` and `src/main/java/com/example/frenchlearning/common/persistence/AuditedEntity.java`
-- [ ] T011 [P] Implement validated application, database, JWT, pagination, and bootstrap configuration properties in `src/main/java/com/example/frenchlearning/configuration/ApplicationProperties.java`
-- [ ] T012 [P] Implement success envelopes and page/cursor metadata in `src/main/java/com/example/frenchlearning/common/api/ApiResponse.java`, `PageMeta.java`, and `CursorMeta.java`
-- [ ] T013 [P] Define stable error codes, field violations, and RFC 9457 extension names in `src/main/java/com/example/frenchlearning/exception/ErrorCode.java` and `src/main/java/com/example/frenchlearning/exception/FieldViolation.java`
-- [ ] T014 Implement domain exception types and centralized validation, malformed request, conflict, not-found, and fallback handling in `src/main/java/com/example/frenchlearning/exception/ApiException.java`, `ResourceNotFoundException.java`, `ConflictException.java`, and `GlobalExceptionHandler.java`
-- [ ] T015 [P] Add correlation ID propagation and safe structured request logging in `src/main/java/com/example/frenchlearning/configuration/CorrelationIdFilter.java` and `src/main/java/com/example/frenchlearning/configuration/LoggingConfiguration.java`
+- [X] T008 Create a reusable PostgreSQL Testcontainers base with dynamic datasource properties in `src/test/java/com/example/frenchlearning/integration/PostgresIntegrationTest.java`
+- [X] T009 [P] Add application context and production-profile configuration smoke tests in `src/test/java/com/example/frenchlearning/integration/ApplicationContextIT.java`
+- [X] T010 [P] Enable JPA auditing and implement UTC audit fields plus optimistic locking in `src/main/java/com/example/frenchlearning/configuration/PersistenceConfiguration.java` and `src/main/java/com/example/frenchlearning/common/persistence/AuditedEntity.java`
+- [X] T011 [P] Implement validated application, database, JWT, pagination, and bootstrap configuration properties in `src/main/java/com/example/frenchlearning/configuration/ApplicationProperties.java`
+- [X] T012 [P] Implement success envelopes and page/cursor metadata in `src/main/java/com/example/frenchlearning/common/api/ApiResponse.java`, `PageMeta.java`, and `CursorMeta.java`
+- [X] T013 [P] Define stable error codes, field violations, and RFC 9457 extension names in `src/main/java/com/example/frenchlearning/exception/ErrorCode.java` and `src/main/java/com/example/frenchlearning/exception/FieldViolation.java`
+- [X] T014 Implement domain exception types and centralized validation, malformed request, conflict, not-found, and fallback handling in `src/main/java/com/example/frenchlearning/exception/ApiException.java`, `ResourceNotFoundException.java`, `ConflictException.java`, and `GlobalExceptionHandler.java`
+- [X] T015 [P] Add correlation ID propagation and safe structured request logging in `src/main/java/com/example/frenchlearning/configuration/CorrelationIdFilter.java` and `src/main/java/com/example/frenchlearning/configuration/LoggingConfiguration.java`
 - [ ] T016 [P] Implement bounded page validation and opaque attempt cursor encoding/decoding in `src/main/java/com/example/frenchlearning/common/api/PageRequestValidator.java` and `src/main/java/com/example/frenchlearning/common/api/AttemptCursorCodec.java`
 - [ ] T017 Configure restricted-detail liveness/readiness groups and verify them in `src/main/resources/application.yml` and `src/test/java/com/example/frenchlearning/integration/HealthEndpointIT.java`
 
