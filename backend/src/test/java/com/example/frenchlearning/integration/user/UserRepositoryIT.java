@@ -12,6 +12,7 @@ import com.example.frenchlearning.user.repository.RoleRepository;
 import com.example.frenchlearning.user.repository.UserRepository;
 import jakarta.persistence.EntityManager;
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -54,6 +55,20 @@ class UserRepositoryIT extends PostgresIntegrationTest {
         assertThat(found.getEmail()).isEqualTo("Learner@Example.Test");
         assertThat(found.getNormalizedEmail()).isEqualTo("learner@example.test");
         assertThat(found.getStatus()).isEqualTo(UserStatus.ACTIVE);
+    }
+
+    @Test
+    void findsAUserByPublicIdAndReportsNormalizedEmailExistence() {
+        User saved = userRepository.saveAndFlush(newUser(
+                "public-id@example.test", "public-id@example.test", requiredRole(RoleName.USER)));
+        entityManager.clear();
+
+        assertThat(userRepository.findByPublicId(saved.getPublicId()))
+                .map(User::getId)
+                .contains(saved.getId());
+        assertThat(userRepository.existsByNormalizedEmail("public-id@example.test")).isTrue();
+        assertThat(userRepository.existsByNormalizedEmail("missing@example.test")).isFalse();
+        assertThat(userRepository.findByPublicId(UUID.randomUUID())).isEmpty();
     }
 
     @Test

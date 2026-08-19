@@ -66,10 +66,10 @@
 
 ### Implementation for User Story 1
 
-- [ ] T022 [US1] Create user, role, user-role, normalized-email uniqueness, status, audit, and role seed schema in `src/main/resources/db/migration/V1__create_users_and_roles.sql`
-- [ ] T023 [P] [US1] Implement user and role persistence models in `src/main/java/com/example/frenchlearning/user/domain/User.java`, `UserStatus.java`, `Role.java`, `RoleName.java`, and `UserRole.java`
-- [ ] T024 [P] [US1] Implement user and role repositories with normalized-email and public-ID lookups in `src/main/java/com/example/frenchlearning/user/repository/UserRepository.java` and `RoleRepository.java`
-- [ ] T025 [P] [US1] Implement locale-independent email normalization and the documented password policy in `src/main/java/com/example/frenchlearning/auth/service/EmailNormalizer.java` and `PasswordPolicy.java`
+- [X] T022 [US1] Create user, role, user-role, normalized-email uniqueness, status, audit, and role seed schema in `src/main/resources/db/migration/V1__create_users_and_roles.sql`
+- [X] T023 [P] [US1] Implement user and role persistence models in `src/main/java/com/example/frenchlearning/user/domain/User.java`, `UserStatus.java`, `Role.java`, `RoleName.java`, and `UserRole.java`
+- [X] T024 [P] [US1] Implement user and role repositories with normalized-email and public-ID lookups in `src/main/java/com/example/frenchlearning/user/repository/UserRepository.java` and `RoleRepository.java`
+- [X] T025 [P] [US1] Implement locale-independent email normalization and the documented password policy in `src/main/java/com/example/frenchlearning/auth/service/EmailNormalizer.java` and `PasswordPolicy.java`
 - [ ] T026 [US1] Configure a delegating Argon2id password encoder, secure parameters, and encoding upgrades in `src/main/java/com/example/frenchlearning/security/PasswordConfiguration.java`
 - [ ] T027 [US1] Implement authenticated principal and account loading with disabled/locked handling in `src/main/java/com/example/frenchlearning/security/AuthenticatedUser.java` and `src/main/java/com/example/frenchlearning/security/DatabaseUserDetailsService.java`
 - [ ] T028 [US1] Implement asymmetric key loading, Nimbus encoder/decoder validation, 15-minute claims, audience checks, and role conversion in `src/main/java/com/example/frenchlearning/security/JwtConfiguration.java` and `src/main/java/com/example/frenchlearning/security/JwtTokenService.java`
